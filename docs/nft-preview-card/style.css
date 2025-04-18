@@ -89,7 +89,9 @@ a:active,
 a:hover {
   color: var(--clr-primary-cyan);
 }
-
+figure {
+  margin: 0;
+}
 /* Make images easier to work with */
 img,
 picture {
@@ -119,6 +121,7 @@ textarea:not([rows]) {
 .card {
   background-color: var(--card-bg);
   max-width: 350px;
+  height: 596px;
   padding: 1.5rem;
   border-radius: 15px;
 }
