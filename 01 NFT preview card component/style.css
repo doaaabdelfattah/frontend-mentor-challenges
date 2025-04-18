@@ -125,8 +125,35 @@ textarea:not([rows]) {
 
 .card__image {
   border-radius: 8px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+.card__image::before {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-primary-cyan);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  inset: 0;
 }
 
+.card__image-active {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.card__image:hover::before {
+  opacity: 0.5;
+}
+.card__image:hover .card__image-active {
+  opacity: 1;
+}
 .card__title {
   font-size: 1.3rem;
   line-height: 1.1;
