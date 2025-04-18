@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+/* Variables */
+:root {
+  /* Primary */
+  --clr-primary-blue: hsl(215, 51%, 70%);
+  --clr-primary-cyan: hsl(178, 100%, 50%);
+
+  /* Neutrals */
+  --main-bg: hsl(217, 54%, 11%);
+  --card-bg: hsl(216, 50%, 16%);
+  --clr-line: hsl(215, 32%, 27%);
+  --clr-white: hsl(0, 0%, 100%);
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+} */
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  font-size: 16px;
+  font-family: "Outfit", sans-serif;
+  background-color: var(--main-bg);
+  display: grid;
+  place-items: center;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+  text-decoration: none;
+}
+a:active,
+a:hover {
+  color: var(--clr-primary-cyan);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+.card {
+  background-color: var(--card-bg);
+  max-width: 350px;
+  padding: 1.5rem;
+  border-radius: 15px;
+}
+
+.card__image {
+  border-radius: 8px;
+}
+
+.card__title {
+  font-size: 1.3rem;
+  line-height: 1.1;
+  font-weight: 500;
+  color: var(--clr-white);
+}
+
+.card__description {
+  color: var(--clr-primary-blue);
+  font-weight: 300;
+  font-size: 1.1rem;
+  line-height: 26px;
+}
+
+.card__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1 rem;
+}
+
+.card__price,
+.card__time {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1 rem;
+}
+
+.card__price {
+  font-weight: var(--fw-semibold);
+  color: var(--clr-primary-cyan);
+}
+
+.card__time {
+  font-weight: var(--fw-regular);
+  color: var(--clr-primary-blue);
+}
+
+.card__separator {
+  height: 1px;
+  width: 100%;
+  background-color: var(--clr-line);
+}
+
+.card__footer {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 1rem;
+  font-weight: var(--fw-regular);
+}
+
+.card__footer-image {
+  width: 33px;
+  height: 33px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.card__creator-label {
+  color: var(--clr-primary-blue);
+}
+
+.card__creator-name {
+  color: var(--clr-white);
+}
