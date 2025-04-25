@@ -1,0 +1,84 @@
+.header {
+  &__nav {
+    margin-top: 4rem;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: space-between;
+    height: 2rem;
+    width: 100%;
+  }
+  &__logo {
+    display: block;
+    & img {
+      width: 12rem;
+      height: auto;
+    }
+  }
+
+  &__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    li {
+      cursor: pointer;
+      a {
+        color: white;
+        position: relative;
+        // display: inline-block;
+
+        &:hover::after {
+          content: "";
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+          bottom: -8px;
+          width: 24px;
+          height: 4px;
+          background-color: white;
+          transition: width 0.3s ease;
+          z-index: 1;
+        }
+      }
+    }
+  }
+  &__menu-mobile {
+    display: none;
+  }
+}
+
+header {
+  position: relative;
+  background-image: url("../images/desktop/image-hero.jpg");
+  @media only screen and (max-width: 600px) {
+    background-image: url("../images/mobile/image-hero.jpg");
+  }
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  height: 650px;
+  display: flex;
+  flex-direction: column;
+}
+.hero__container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.hero__box {
+  border: 2px white solid;
+  padding: 40px;
+  width: fit-content;
+}
+
+.hero__text {
+  color: white;
+  text-transform: uppercase;
+  font-size: 4.5rem;
+  display: inline-block;
+}
