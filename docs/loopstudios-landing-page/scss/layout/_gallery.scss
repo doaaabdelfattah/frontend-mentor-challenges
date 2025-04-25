@@ -1,5 +1,6 @@
 .gallery {
   margin-top: 11.5rem;
+  margin-bottom: 11.5rem;
   &__header {
     display: flex;
     justify-content: space-between;
@@ -9,20 +10,22 @@
       text-transform: uppercase;
       font-size: 3rem;
     }
-    button {
-      padding: 13px 38px;
-      text-transform: uppercase;
-      font-size: 0.9rem;
-      background-color: white;
-      border: 1px solid black;
-      letter-spacing: 5px;
-      min-width: fit-content;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      &:hover {
-        background-color: black;
-        color: white;
-      }
+  }
+  &__button {
+    padding: 13px 38px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    background-color: white;
+    border: 1px solid black;
+    letter-spacing: 5px;
+    line-height: 0.88rem;
+    min-width: fit-content;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+      background-color: black;
+      color: white;
     }
   }
   &__grid {
@@ -45,7 +48,7 @@
       text-transform: uppercase;
       color: white;
       font-size: 2rem;
-      font-weight: 200;
+      font-weight: 300;
     }
     &:hover {
       img {
@@ -58,10 +61,14 @@
     }
   }
 }
+.bottom {
+  display: none;
+}
 
 @media screen and (max-width: 768px) {
   .gallery {
     margin-top: 6rem;
+    margin-bottom: 6.8rem;
     &__header {
       justify-content: center;
       margin-bottom: 3rem;
@@ -80,8 +87,12 @@
         font-size: 1.5rem;
       }
     }
-    &__header button {
-      display: none;
-    }
+  }
+  .top {
+    display: none;
+  }
+  .bottom {
+    display: block;
+    margin: 2.1rem auto 0 auto;
   }
 }
